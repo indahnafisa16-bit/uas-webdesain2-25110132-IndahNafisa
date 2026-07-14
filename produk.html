@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produk — Sate Taichan Ndoro</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-ndoro fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">SATE <span>TAICHAN</span> NDORO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+        <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        <li class="nav-item ml-lg-3"><a class="btn btn-bara btn-sm" href="https://wa.me/6280000000000" target="_blank"><i class="fab fa-whatsapp"></i> Pesan</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <div class="eyebrow mb-2"><i class="fas fa-utensils mr-1"></i> Menu Kami</div>
+    <h1 class="font-display">Pilih Bakaranmu</h1>
+    <p class="mb-0" style="color:var(--cream-dim);font-size:.9rem;">Klik kartu produk untuk melihat detail lengkap.</p>
+  </div>
+</header>
+
+<div class="spice-strip py-3">
+  <div class="container">
+    <div class="d-flex justify-content-center flex-wrap" style="gap:1.5rem;">
+      <span><i class="fas fa-pepper-hot text-ember"></i> Normal</span>
+      <span><i class="fas fa-pepper-hot text-ember"></i><i class="fas fa-pepper-hot text-ember"></i> Sedang</span>
+      <span><i class="fas fa-pepper-hot text-ember"></i><i class="fas fa-pepper-hot text-ember"></i><i class="fas fa-pepper-hot text-ember"></i> Nampol</span>
+      <span><i class="fas fa-pepper-hot text-ember"></i><i class="fas fa-pepper-hot text-ember"></i><i class="fas fa-pepper-hot text-ember"></i><i class="fas fa-pepper-hot text-ember"></i> Mati Rasa</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="kartu-menu" data-toggle="modal" data-target="#modalProduk"
+          data-nama="Taichan Ayam" data-harga="Rp 25.000" data-level="Nampol (Level 3 dari 4)"
+          data-deskripsi="Daging ayam bakar empuk dengan sambal Taichan pedas yang menggugah selera."
+          data-foto="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=80">
+          <div class="foto" style="background-image:url(ayam.jpeg);"><span class="badge-pedas">NAMPOL</span></div>
+          <div class="isi">
+            <h5 class="font-display">Taichan Ayam</h5>
+            <p>Juicy, pedas, dan bikin ketagihan.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="harga">Rp 25.000</span>
+              <span class="detail-hint"><i class="fas fa-circle-info"></i> Detail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="kartu-menu" data-toggle="modal" data-target="#modalProduk"
+          data-nama="Taichan Kulit" data-harga="Rp 28.000" data-level="Sedang (Level 2 dari 4)"
+          data-deskripsi="Kulit ayam bakar renyah dengan sambal pedas gurih yang bikin nagih."
+          data-foto="https://images.unsplash.com/photo-1598515213692-5f252f0b3fb1?auto=format&fit=crop&w=900&q=80">
+          <div class="foto" style="background-image:url(kulit.jpeg);"><span class="badge-pedas">SEDANG</span></div>
+          <div class="isi">
+            <h5 class="font-display">Taichan Kulit</h5>
+            <p>Renyah, gurih, dan penuh rasa.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="harga">Rp 28.000</span>
+              <span class="detail-hint"><i class="fas fa-circle-info"></i> Detail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="kartu-menu" data-toggle="modal" data-target="#modalProduk"
+          data-nama="Taichan Kulit + Ayam" data-harga="Rp 30.000" data-level="Nampol (Level 3 dari 4)"
+          data-deskripsi="Perpaduan daging dan kulit ayam bakar dalam satu porsi yang nikmat."
+          data-foto="https://images.unsplash.com/photo-1602273660127-a0000560a4dd?auto=format&fit=crop&w=900&q=80">
+          <div class="foto" style="background-image:url(campur.jpeg);"><span class="badge-pedas">NAMPOL</span></div>
+          <div class="isi">
+            <h5 class="font-display">Taichan Kulit + Ayam</h5>
+            <p>Kombinasi favorit dalam satu porsi.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="harga">Rp 30.000</span>
+              <span class="detail-hint"><i class="fas fa-circle-info"></i> Detail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="kartu-menu" data-toggle="modal" data-target="#modalProduk"
+          data-nama="Miechan Ayam" data-harga="Rp 24.000" data-level="MATI RASA (Level 4 dari 4)"
+          data-deskripsi="Mi kenyal dengan taichan ayam dan sambal khas yang lezat dan mengenyangkan."
+          data-foto="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=80">
+          <div class="foto" style="background-image:url(miechan.jpeg);"><span class="badge-pedas">MATI RASA</span></div>
+          <div class="isi">
+            <h5 class="font-display">Miechan Ayam</h5>
+            <p>Mi gurih dengan ayam yang nikmat di setiap suapan.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="harga">Rp 24.000</span>
+              <span class="detail-hint"><i class="fas fa-circle-info"></i> Detail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="kartu-menu" data-toggle="modal" data-target="#modalProduk"
+          data-nama="Wings" data-harga="Rp 18.000" data-level="Normal (Level 1 dari 4)"
+          data-deskripsi="Sayap ayam bakar berbumbu khas dengan cita rasa gurih."
+          data-foto="https://images.unsplash.com/photo-1551326844-4df70f78d0e9?auto=format&fit=crop&w=900&q=80">
+          <div class="foto" style="background-image:url(sayap.jpeg);"><span class="badge-pedas">NORMAL</span></div>
+          <div class="isi">
+            <h5 class="font-display">Wings</h5>
+            <p>Sayap ayam bakar yang juicy dan berbumbu.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="harga">Rp 18.000</span>
+              <span class="detail-hint"><i class="fas fa-circle-info"></i> Detail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="kartu-menu" data-toggle="modal" data-target="#modalProduk"
+          data-nama="Dimsum" data-harga="Rp 15.000" data-level="Normal (Level 1 dari 4)"
+          data-deskripsi="Dimsum lembut dengan isian gurih dan cita rasa yang lezat."
+          data-foto="https://images.unsplash.com/photo-1626804475297-411f51bb3171?auto=format&fit=crop&w=900&q=80">
+          <div class="foto" style="background-image:url(dimsum.jpeg);"><span class="badge-pedas">NORMAL</span></div>
+          <div class="isi">
+            <h5 class="font-display">Dimsum</h5>
+            <p>Lembut, gurih, dan nikmat di setiap gigitan.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="harga">Rp 15.000</span>
+              <span class="detail-hint"><i class="fas fa-circle-info"></i> Detail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade modal-ndoro" id="modalProduk" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title font-display">Nama Produk</h5>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      </div>
+      <div class="foto-modal"></div>
+      <div class="modal-body">
+        <p class="modal-deskripsi mb-3"></p>
+        <p class="mb-1" style="color:var(--muted);font-size:.82rem;"><strong style="color:var(--cream-dim);">Tingkat Pedas:</strong> <span class="modal-level"></span></p>
+        <div class="modal-harga mt-2"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://wa.me/6285356181644" target="_blank" class="btn btn-bara btn-block"><i class="fab fa-whatsapp"></i> Pesan Produk Ini</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cta-banner py-5">
+  <div class="container text-center py-2">
+    <h3 class="font-display mb-2" style="font-size:2rem;">Sudah Tentukan Pilihan?</h3>
+    <p class="mb-4" style="color:var(--cream-dim);">Langsung order via WhatsApp, kami siapkan secepat bara menyala.</p>
+    <a href="https://wa.me/6280000000000" target="_blank" class="btn btn-outline-cream"><i class="fab fa-whatsapp"></i> Pesan via WhatsApp</a>
+  </div>
+</section>
+
+<footer class="footer-ndoro pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="footer-brand mb-2">SATE <span>TAICHAN</span> NDORO</div>
+        <p class="mb-3">UMKM kuliner bakaran ayam taichan, berlokasi di Pekanbaru, Riau.</p>
+        <div class="sosial">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/6280000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Navigasi</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Jam Buka</h5>
+        <p class="mb-1">Setiap Hari: 15.00 — 22.30 WIB</p>
+        <p>Jl. Kopan, Cinta Raja, Sail, Kota Pekanbaru, Riau</p>
+      </div>
+    </div>
+    <hr class="footer-hr">
+    <p class="text-center mb-0" style="font-size:.8rem;">&copy; 2026 Sate Taichan Ndoro. Tugas UAS Web Desain 2.</p>
+  </div>
+</footer>
+
+<button id="btnTop"><i class="fas fa-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>window.addEventListener('scroll',function(){document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50);});</script>
+</body>
+  </html>
