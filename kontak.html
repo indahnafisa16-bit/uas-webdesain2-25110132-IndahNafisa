@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak — Sate Taichan Ndoro</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-ndoro fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">SATE <span>TAICHAN</span> NDORO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+        <li class="nav-item"><a class="nav-link active" href="kontak.html">Kontak</a></li>
+        <li class="nav-item ml-lg-3"><a class="btn btn-bara btn-sm" href="https://wa.me/6285356181644" target="_blank"><i class="fab fa-whatsapp"></i> Pesan</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <div class="eyebrow mb-2"><i class="fas fa-location-dot mr-1"></i> Kontak</div>
+    <h1 class="font-display">Datang atau Hubungi Kami</h1>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+
+      <!-- INFO KONTAK -->
+      <div class="col-lg-5 mb-5 mb-lg-0 info-kontak">
+        <div class="eyebrow mb-2">Info Kontak</div>
+        <h2 class="font-display mb-4" style="color:var(--cream)">Ngobrol Dulu Sebelum Pesan</h2>
+
+        <div class="d-flex mb-4">
+          <i class="fas fa-location-dot text-ember mr-3"></i>
+          <div><strong>Alamat</strong><p>Jl. Kopan, Cinta Raja, Sail, Pekanbaru, Riau</p></div>
+        </div>
+        <div class="d-flex mb-4">
+          <i class="fab fa-whatsapp text-ember mr-3"></i>
+          <div><strong>WhatsApp / Telepon</strong><p>0853-5618-1644</p></div>
+        </div>
+        <div class="d-flex mb-4">
+          <i class="fas fa-envelope text-ember mr-3"></i>
+          <div><strong>Email</strong><p>halo@satetaichanndoro.id</p></div>
+        </div>
+
+        <h5 class="font-display mb-3" style="color:var(--cream);font-size:.9rem;">Jam Buka</h5>
+        <table class="table tabel-jam mb-4">
+          <tbody>
+            <tr><td>Setiap Hari</td><td class="text-right" style="color:var(--cream-dim);">15.00 — 22.30</td></tr>
+          </tbody>
+        </table>
+
+        <div class="sosial">
+          <a href="https://www.instagram.com/taichanndorosenayan?igsh=OXV0dW5rdGIwYjVm"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/6285356181644" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="col-lg-7">
+        <div class="kartu-visi" style="padding:2rem 2.2rem;">
+          <h4 class="font-display mb-1" style="font-size:1rem;color:var(--cream);">Kirim Pesan</h4>
+          <p style="color:var(--muted);font-size:.82rem;" class="mb-4">Untuk reservasi rombongan, kerja sama, atau pertanyaan lain.</p>
+
+          <div id="formAlert" class="alert alert-success d-none" role="alert"></div>
+
+          <form class="form-ndoro needs-validation" novalidate>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Nama</label>
+                <input type="text" class="form-control" placeholder="Nama lengkap" required>
+                <div class="invalid-feedback">Nama wajib diisi.</div>
+              </div>
+              <div class="form-group col-md-6">
+                <label>No. WhatsApp</label>
+                <input type="tel" class="form-control" pattern="[0-9]{9,15}" placeholder="085356181644" required>
+                <div class="invalid-feedback">Masukkan Nomor yang valid.</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="nama@email.com" required>
+              <div class="invalid-feedback">Masukkan email yang valid.</div>
+            </div>
+            <div class="form-group">
+              <label>Subjek</label>
+              <select class="form-control" required>
+                <option value="">-- Pilih Subjek --</option>
+                <option>Reservasi Rombongan</option>
+                <option>Kerja Sama / Kemitraan</option>
+                <option>Saran &amp; Masukan</option>
+                <option>Lainnya</option>
+              </select>
+              <div class="invalid-feedback">Pilih subjek pesan.</div>
+            </div>
+            <div class="form-group">
+              <label>Pesan</label>
+              <textarea class="form-control" rows="4" placeholder="Tulis pesanmu di sini..." required minlength="10"></textarea>
+              <div class="invalid-feedback">Pesan minimal 10 karakter.</div>
+            </div>
+            <button type="submit" class="btn btn-bara">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PETA -->
+<section class="pb-5">
+  <div class="container">
+    <div class="eyebrow mb-2">Lokasi</div>
+    <h2 class="font-display mb-4" style="color:var(--cream)">Temukan Warung Kami</h2>
+    <div class="peta-wrap">
+      <iframe src="https://maps.google.com/maps?q=Pekanbaru&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ ACCORDION -->
+<section class="section bg-coal">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="eyebrow mb-2">Sering Ditanyakan</div>
+      <h2 class="font-display" style="color:var(--cream)">FAQ</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div id="accordionFAQ">
+          <div class="card card-faq">
+            <div class="card-header" id="h1">
+              <button class="btn-faq" type="button" data-toggle="collapse" data-target="#c1" aria-expanded="true">Apakah bisa pesan untuk dibawa pulang? <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div id="c1" class="collapse show" data-parent="#accordionFAQ">
+              <div class="card-body">Bisa. Silakan datang langsung atau pesan via WhatsApp untuk diambil di tempat (take away).</div>
+            </div>
+          </div>
+          <div class="card card-faq">
+            <div class="card-header" id="h2">
+              <button class="btn-faq collapsed" type="button" data-toggle="collapse" data-target="#c2" aria-expanded="false">Apakah melayani pesan antar (delivery)? <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div id="c2" class="collapse" data-parent="#accordionFAQ">
+              <div class="card-body">Saat ini pesan antar dilayani via WhatsApp untuk area sekitar lokasi. Tanyakan ongkos kirim terlebih dahulu.</div>
+            </div>
+          </div>
+          <div class="card card-faq">
+            <div class="card-header" id="h3">
+              <button class="btn-faq collapsed" type="button" data-toggle="collapse" data-target="#c3" aria-expanded="false">Bisa request level pedas sendiri? <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div id="c3" class="collapse" data-parent="#accordionFAQ">
+              <div class="card-body">Tentu, sebutkan saja level pedas saat memesan: Normal, Sedang, Nampol, atau Mati Rasa.</div>
+            </div>
+          </div>
+          <div class="card card-faq">
+            <div class="card-header" id="h4">
+              <button class="btn-faq collapsed" type="button" data-toggle="collapse" data-target="#c4" aria-expanded="false">Apakah bisa reservasi untuk rombongan? <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div id="c4" class="collapse" data-parent="#accordionFAQ">
+              <div class="card-body">Bisa, isi form kontak di atas dengan subjek "Reservasi Rombongan" minimal 1 hari sebelumnya.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner py-5">
+  <div class="container text-center py-2">
+    <h3 class="font-display mb-2" style="font-size:2rem;">Lebih Cepat Lewat WhatsApp</h3>
+    <p class="mb-4" style="color:var(--cream-dim);">Chat langsung untuk pemesanan instan.</p>
+    <a href="https://wa.me/6285356181644" target="_blank" class="btn btn-outline-cream"><i class="fab fa-whatsapp"></i> Chat Sekarang</a>
+  </div>
+</section>
+
+<footer class="footer-ndoro pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="footer-brand mb-2">SATE <span>TAICHAN</span> NDORO</div>
+        <p class="mb-3">UMKM kuliner bakaran ayam taichan, berlokasi di Pekanbaru, Riau.</p>
+        <div class="sosial">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/6285356181644" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Navigasi</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Jam Buka</h5>
+        <p class="mb-1">Setiap Hari: 15.00 — 22.30 WIB</p>
+        <p>Jl. Kopan, Cinta Raja, Sail, Pekanbaru, Riau</p>
+      </div>
+    </div>
+    <hr class="footer-hr">
+    <p class="text-center mb-0" style="font-size:.8rem;">&copy; 2026 Sate Taichan Ndoro. Tugas UAS Web Desain 2.</p>
+  </div>
+</footer>
+
+<button id="btnTop"><i class="fas fa-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script>window.addEventListener('scroll',function(){document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50);});</script>
+</body>
+          </html>
