@@ -1,6 +1,4 @@
-// ===== main.js — fitur interaktif tambahan =====
-
-// 1) Validasi form kontak (Bootstrap custom validation)
+// Validasi form
 (function () {
   'use strict';
   var forms = document.querySelectorAll('.needs-validation');
@@ -14,7 +12,7 @@
         var alertBox = document.getElementById('formAlert');
         if (alertBox) {
           alertBox.classList.remove('d-none');
-          alertBox.innerHTML = '<i class="fas fa-circle-check mr-2"></i>Pesan terkirim! Kami akan segera menghubungi Anda.';
+          alertBox.innerHTML = '<i class="fas fa-circle-check mr-2"></i>Pesan terkirim!';
           form.reset();
           form.classList.remove('was-validated');
         }
@@ -24,7 +22,7 @@
   });
 })();
 
-// 2) Tombol kembali ke atas, muncul setelah scroll
+// Tombol kembali ke atas
 window.addEventListener('scroll', function () {
   var btn = document.getElementById('btnTop');
   if (!btn) return;
@@ -36,59 +34,49 @@ document.addEventListener('click', function (e) {
   }
 });
 
-// 3) Isi konten modal produk secara dinamis saat tombol "Lihat Detail" / kartu diklik
+// Modal produk dinamis
 document.addEventListener('DOMContentLoaded', function () {
   var modal = document.getElementById('modalProduk');
-  if (!modal) return;
-  modal.addEventListener('show.bs.modal', function (event) {
-    handleModalFill(event);
-  });
-  // fallback untuk Bootstrap 4 (event jquery)
-  if (window.$) {
-    $('#modalProduk').on('show.bs.modal', handleModalFill);
+  if (modal && window.$) {
+    $('#modalProduk').on('show.bs.modal', function (event) {
+      var trigger = event.relatedTarget;
+      if (!trigger) return;
+      modal.querySelector('.modal-title').textContent = trigger.getAttribute('data-nama');
+      modal.querySelector('.modal-deskripsi').textContent = trigger.getAttribute('data-deskripsi');
+      modal.querySelector('.modal-harga').textContent = trigger.getAttribute('data-harga');
+      modal.querySelector('.modal-level').textContent = trigger.getAttribute('data-level');
+      modal.querySelector('.foto-modal').style.backgroundImage = "url('" + trigger.getAttribute('data-foto') + "')";
+    });
   }
-  function handleModalFill(event) {
-    var trigger = event.relatedTarget;
-    if (!trigger) return;
-    var nama = trigger.getAttribute('data-nama');
-    var deskripsi = trigger.getAttribute('data-deskripsi');
-    var harga = trigger.getAttribute('data-harga');
-    var foto = trigger.getAttribute('data-foto');
-    var level = trigger.getAttribute('data-level');
 
-    modal.querySelector('.modal-title').textContent = nama;
-    modal.querySelector('.modal-deskripsi').textContent = deskripsi;
-    modal.querySelector('.modal-harga').textContent = harga;
-    modal.querySelector('.foto-modal').style.backgroundImage = "url('" + foto + "')";
-    modal.querySelector('.modal-level').textContent = level;
-  }
   // Animasi angka statistik
-function animasiAngka(el, target, durasi) {
-  var start = 0;
-  var increment = target / (durasi / 16);
-  var timer = setInterval(function() {
-    start += increment;
-    if (start >= target) {
-      el.textContent = target + (el.dataset.suffix || '');
-      clearInterval(timer);
-    } else {
-      el.textContent = Math.floor(start) + (el.dataset.suffix || '');
-    }
-  }, 16);
-}
+  function animasiAngka(el, target, durasi) {
+    var start = 0;
+    var increment = target / (durasi / 16);
+    var timer = setInterval(function () {
+      start += increment;
+      if (start >= target) {
+        el.textContent = target + (el.dataset.suffix || '');
+        clearInterval(timer);
+      } else {
+        el.textContent = Math.floor(start) + (el.dataset.suffix || '');
+      }
+    }, 16);
+  }
 
-var observer = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      var angka = entry.target;
-      var target = parseInt(angka.dataset.target);
-      animasiAngka(angka, target, 1500);
-      observer.unobserve(angka);
-    }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var angka = entry.target;
+        var target = parseInt(angka.dataset.target);
+        animasiAngka(angka, target, 1500);
+        observer.unobserve(angka);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.angka').forEach(function (el) {
+    observer.observe(el);
   });
-}, { threshold: 0.5 });
 
-document.querySelectorAll('.angka').forEach(function(el) {
-  observer.observe(el);
-});
 });
