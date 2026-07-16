@@ -24,6 +24,11 @@
 
 // Tombol kembali ke atas
 window.addEventListener('scroll', function () {
+  // Paksa carousel jalan otomatis
+$('#heroCarousel').carousel({
+  interval: 4500,
+  ride: 'carousel'
+});
   var btn = document.getElementById('btnTop');
   if (!btn) return;
   btn.style.display = window.scrollY > 400 ? 'block' : 'none';
