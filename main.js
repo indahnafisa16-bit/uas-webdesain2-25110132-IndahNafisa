@@ -62,4 +62,33 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.querySelector('.foto-modal').style.backgroundImage = "url('" + foto + "')";
     modal.querySelector('.modal-level').textContent = level;
   }
+  // Animasi angka statistik
+function animasiAngka(el, target, durasi) {
+  var start = 0;
+  var increment = target / (durasi / 16);
+  var timer = setInterval(function() {
+    start += increment;
+    if (start >= target) {
+      el.textContent = target + (el.dataset.suffix || '');
+      clearInterval(timer);
+    } else {
+      el.textContent = Math.floor(start) + (el.dataset.suffix || '');
+    }
+  }, 16);
+}
+
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      var angka = entry.target;
+      var target = parseInt(angka.dataset.target);
+      animasiAngka(angka, target, 1500);
+      observer.unobserve(angka);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.angka').forEach(function(el) {
+  observer.observe(el);
+});
 });
