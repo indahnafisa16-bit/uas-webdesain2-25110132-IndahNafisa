@@ -37,6 +37,50 @@ document.addEventListener('click', function (e) {
 document.addEventListener('DOMContentLoaded', function () {
 
   // Carousel
+  if (window.$) {
+    $('#heroCarousel').carousel({ interval: 4500, ride: 'carousel' });
+  }
+
+  // Modal produk dinamis
+  var modal = document.getElementById('modalProduk');
+  if (modal && window.$) {
+    $('#modalProduk').on('show.bs.modal', function (event) {
+      var trigger = event.relatedTarget;
+      if (!trigger) return;
+      modal.querySelector('.modal-title').textContent = trigger.getAttribute('data-nama');
+      modal.querySelector('.modal-deskripsi').textContent = trigger.getAttribute('data-deskripsi');
+      modal.querySelector('.modal-harga').textContent = trigger.getAttribute('data-harga');
+      modal.querySelector('.modal-level').textContent = trigger.getAttribute('data-level');
+      modal.querySelector('.foto-modal').style.backgroundImage = "url('" + trigger.getAttribute('data-foto') + "')";
+    });
+  }
+
+  // Animasi angka — langsung jalan saat halaman load
+  function animasiAngka(el, target, durasi) {
+    var start = 0;
+    var increment = target / (durasi / 16);
+    var timer = setInterval(function () {
+      start += increment;
+      if (start >= target) {
+        el.textContent = target + (el.dataset.suffix || '');
+        clearInterval(timer);
+      } else {
+        el.textContent = Math.floor(start) + (el.dataset.suffix || '');
+      }
+    }, 16);
+  }
+
+  // Langsung jalankan semua tanpa perlu scroll
+  document.querySelectorAll('.angka').forEach(function (el) {
+    var target = parseInt(el.dataset.target);
+    if (!isNaN(target)) {
+      animasiAngka(el, target, 2000);
+    }
+  });
+
+});document.addEventListener('DOMContentLoaded', function () {
+
+  // Carousel
   $('#heroCarousel').carousel({ interval: 4500, ride: 'carousel' });
 
   // Modal produk dinamis
