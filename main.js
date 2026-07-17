@@ -67,17 +67,15 @@ window.onload = function () {
 
     el.textContent = '0' + suffix;
     var current = 0;
-    var step = Math.ceil(target / 60);
 
     var timer = setInterval(function () {
-      current += step;
+      current += 1;
       if (current >= target) {
         current = target;
         clearInterval(timer);
       }
       el.textContent = current + suffix;
-    }, 30);
+    }, target > 100 ? 15 : 200);
   });
-
 };
         
