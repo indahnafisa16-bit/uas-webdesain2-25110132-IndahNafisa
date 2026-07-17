@@ -223,26 +223,5 @@
     document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
   });
 </script>
-  <script>
-// TEST ANIMASI LANGSUNG
-window.onload = function() {
-  var elemen = document.querySelectorAll('.angka');
-  alert('Jumlah elemen angka ditemukan: ' + elemen.length);
-  elemen.forEach(function(el) {
-    var target = parseInt(el.getAttribute('data-target'));
-    var suffix = el.getAttribute('data-suffix') || '';
-    var start = 0;
-    var timer = setInterval(function() {
-      start += Math.ceil(target / 80);
-      if (start >= target) {
-        el.textContent = target + suffix;
-        clearInterval(timer);
-      } else {
-        el.textContent = start + suffix;
-      }
-    }, 20);
-  });
-};
-</script>
 </body>
 </html>
