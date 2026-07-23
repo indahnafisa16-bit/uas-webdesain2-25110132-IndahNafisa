@@ -65,7 +65,7 @@ window.onload = function () {
     var suffix = el.getAttribute('data-suffix') || '';
     if (isNaN(target)) return;
 
-    var current = target > 1000 ? 1990 : 0;
+    var current = target > 1000 ? 2000 : 0;
     el.textContent = current + suffix;
 
     var timer = setInterval(function () {
