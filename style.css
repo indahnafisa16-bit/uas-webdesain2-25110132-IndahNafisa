@@ -437,14 +437,14 @@ img { max-width: 100%; }
   overflow: hidden;
 }
 .card-faq .card-header {
-  background: transparent;
+  background: var(--surface);
   border: none;
   padding: 0;
 }
 .card-faq .btn-faq {
   width: 100%;
   text-align: left;
-  color: var(--cream);
+  color: var(--cream) !important;
   font-weight: 600;
   font-size: .9rem;
   padding: 1.1rem 1.3rem;
@@ -452,9 +452,11 @@ img { max-width: 100%; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: color .2s;
+  background: transparent;
+  border: none;
+  cursore: pointer;
 }
-.card-faq .btn-faq:hover { color: var(--ember); text-decoration: none; }
+.card-faq .btn-faq:hover { color: var(--ember) !important; text-decoration: none; }
 .card-faq .btn-faq i { color: var(--ember); font-size: .8rem; transition: transform .2s; }
 .card-faq .btn-faq[aria-expanded="true"] i { transform: rotate(180deg); }
 .card-faq .card-body { color: var(--cream-dim); font-size: .88rem; padding: 0 1.3rem 1.1rem; }
